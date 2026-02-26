@@ -11,22 +11,20 @@
     <h1>Color Memory Game</h1>
 
     <div class="score">
-      Score: <span id="score">0</span>
+      Moves: <span id="moves">0</span>
       Matches: <span id="matches">0</span>
     </div>
 
-    <div class="game-board" id="game-board">
+    <div class="board" id="board">
 
     </div>
     
     <div class="Message" id="message"></div>
 
-    <button class="new-game-button" onclick="newGame()">New Game</button>
-    <button class="theme" onclick="changeTheme()">Change Theme</button>
-    <button class="reset-button" onclick="resetGame()">Reset Game</button>
-
+    <button class="btn" onclick="startGame()">New Game</button>
+    <button class="btn" onclick="changeTheme()">Change Colors</button>
   </div>
-
+  <script src="index.js"></script>
   
 </body>
 </html>

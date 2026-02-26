@@ -7,7 +7,7 @@
         /* body is the main container for everything visible */
         body {
             font-family: Arial, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #1d1d1d 0%, #f3e4e4 100%);
             min-height: 100vh; /* vh = viewport height, 100vh = full screen */
             display: flex; /* Flexbox: makes centering easy! */
             justify-content: center; /* Centers horizontally */
@@ -27,13 +27,13 @@
         }
 
         h1 {
-            color: #333;
+            color: #d47e1c;
             margin-bottom: 10px;
         }
 
         .score {
             font-size: 18px;
-            color: #666;
+            color: #db8d33;
             margin-bottom: 20px;
         }
 
