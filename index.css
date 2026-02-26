@@ -1,0 +1,101 @@
+* {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box; /* Makes sizing more predictable */
+        }
+
+        /* body is the main container for everything visible */
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh; /* vh = viewport height, 100vh = full screen */
+            display: flex; /* Flexbox: makes centering easy! */
+            justify-content: center; /* Centers horizontally */
+            align-items: center; /* Centers vertically */
+            padding: 20px;
+        }
+
+        /* Class selectors start with a dot . */
+        .game-container {
+            background: white;
+            padding: 30px;
+            border-radius: 20px; /* Rounded corners */
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3); /* Drop shadow */
+            text-align: center;
+            max-width: 500px;
+            width: 100%;
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .score {
+            font-size: 18px;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        /* The game board grid */
+        .board {
+            display: grid; /* CSS Grid: perfect for game boards */
+            grid-template-columns: repeat(4, 1fr); /* 4 equal columns */
+            gap: 10px; /* Space between cards */
+            margin: 20px 0;
+        }
+
+        /* Each card in the grid */
+        .card {
+            aspect-ratio: 1; /* Makes it square (width = height) */
+            background: #e0e0e0;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer; /* Shows hand cursor on hover */
+            transition: all 0.3s ease; /* Smooth animations */
+            font-size: 0; /* Hide any text initially */
+        }
+
+        /* Hover effect: what happens when you hover over a card */
+        .card:hover:not(.flipped):not(.matched) {
+            transform: scale(1.05); /* Grows slightly */
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        /* When a card is flipped */
+        .card.flipped {
+            transform: rotateY(180deg); /* 3D flip effect */
+        }
+
+        /* When cards are matched */
+        .card.matched {
+            opacity: 0.6;
+            cursor: default; /* Not clickable anymore */
+        }
+
+        /* Buttons */
+        .btn {
+            background: #667eea;
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 25px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin: 10px 5px;
+        }
+
+        .btn:hover {
+            background: #764ba2;
+            transform: translateY(-2px); /* Lifts up slightly */
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Message area for feedback */
+        .message {
+            height: 30px;
+            font-weight: bold;
+            color: #667eea;
+            margin-top: 10px;
+        }
